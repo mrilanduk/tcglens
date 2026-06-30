@@ -1,18 +1,18 @@
-# TCG Snipe
+# TCG Lens
 
-A Chrome (Manifest V3) extension that snipes underpriced Pokémon cards — it scans
-marketplace listings and shows the **live market value** inline on each one.
-Site: [tcgsnipe.co.uk](https://tcgsnipe.co.uk)
+A Chrome (Manifest V3) extension that shows the **live market value** of Pokémon
+cards inline on marketplace listings as you browse.
+Site: [tcglens.co.uk](https://tcglens.co.uk)
 
 ## 🧪 For testers — install in 2 minutes
 
-1. **Download the zip:** [latest release →](https://github.com/mrilanduk/tcgsnipe/releases/latest)
-   (grab `tcgsnipe.zip`).
+1. **Download the zip:** [latest release →](https://github.com/mrilanduk/tcglens/releases/latest)
+   (grab `tcglens.zip`).
 2. **Unzip** it to a folder (the folder must contain `manifest.json` at its top level).
 3. Open **`chrome://extensions`** → turn on **Developer mode** (top-right) →
    **Load unpacked** → select the unzipped folder.
-4. Click the crosshair icon → **enter your access code** → Unlock.
-   (No code? Request access at tcgsnipe.co.uk.)
+4. Click the green lens icon → **enter your access code** → Unlock.
+   (No code? Request access at tcglens.co.uk.)
 5. Browse **eBay / Vinted / Facebook Marketplace** — price badges appear as you scroll.
 
 Notes: keep the unzipped folder where it is (Chrome loads it live). To update to a

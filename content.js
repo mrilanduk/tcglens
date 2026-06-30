@@ -136,7 +136,7 @@
     const t = document.createElement('div');
     t.id = 'pulse-locked-toast';
     t.className = 'pulse-toast';
-    t.textContent = '🔒 Sign in to TCG Snipe (click the extension icon) to see card prices';
+    t.textContent = '🔒 Sign in to TCG Lens (click the extension icon) to see card prices';
     document.body.appendChild(t);
     setTimeout(() => t.remove(), 8000);
   }
@@ -165,8 +165,8 @@
     } else {
       badge.classList.add('pulse-miss');
       if (result?.reason === 'locked') {
-        badge.textContent = '🔒 Sign in to TCG Snipe';
-        badge.title = 'Open the TCG Snipe extension and enter your access code';
+        badge.textContent = '🔒 Sign in to TCG Lens';
+        badge.title = 'Open the TCG Lens extension and enter your access code';
       } else {
         const labels = { no_match: 'no match', no_price: 'no price', parse_failed: '—', error: 'error' };
         badge.textContent = `Pulse: ${labels[result?.reason] || '—'}`;

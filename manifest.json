@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "TCG Snipe",
-  "version": "0.1.1",
-  "description": "Snipe underpriced Pokémon cards — live market value shown inline on eBay, Vinted & Facebook Marketplace listings.",
+  "name": "TCG Lens",
+  "version": "0.1.2",
+  "description": "See live Pokémon card market value, shown inline on eBay, Vinted & Facebook Marketplace listings.",
   "permissions": ["storage", "contextMenus", "scripting", "activeTab"],
   "host_permissions": [
     "*://*.ebay.co.uk/*",
@@ -20,7 +20,7 @@
     "128": "icons/icon128.png"
   },
   "action": {
-    "default_title": "TCG Snipe",
+    "default_title": "TCG Lens",
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon16.png",

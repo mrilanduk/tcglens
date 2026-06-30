@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TCG Snipe</title>
+  <title>TCG Lens</title>
   <style>
     :root { color-scheme: light dark; }
     body {
@@ -12,7 +12,7 @@
       background: #14171d; color: #e8eaed;
     }
     h1 { font-size: 14px; margin: 0 0 2px; display: flex; align-items: center; gap: 6px; }
-    h1 .dot { width: 9px; height: 9px; border-radius: 50%; background: #2ea4ff; }
+    h1 .dot { width: 9px; height: 9px; border-radius: 50%; background: #22c55e; }
     p.sub { margin: 0 0 12px; opacity: .55; font-size: 11px; }
     label { display: block; font-size: 11px; opacity: .7; margin: 10px 0 4px; text-transform: uppercase; letter-spacing: .03em; }
     input[type=text] {
@@ -26,24 +26,24 @@
     .switch input { opacity: 0; width: 0; height: 0; }
     .slider { position: absolute; inset: 0; background: #3a404d; border-radius: 999px; transition: .15s; cursor: pointer; }
     .slider::before { content: ""; position: absolute; width: 16px; height: 16px; left: 3px; top: 3px; background: #fff; border-radius: 50%; transition: .15s; }
-    input:checked + .slider { background: #2ea4ff; }
+    input:checked + .slider { background: #22c55e; }
     input:checked + .slider::before { transform: translateX(16px); }
     .sites { border-top: 1px solid #232833; border-bottom: 1px solid #232833; margin: 8px 0; }
     button {
       width: 100%; margin-top: 10px; padding: 9px; border: 0; border-radius: 8px;
-      background: #2ea4ff; color: #06243d; font-weight: 700; font-size: 13px; cursor: pointer;
+      background: #22c55e; color: #06243d; font-weight: 700; font-size: 13px; cursor: pointer;
     }
     button.ghost { background: #232833; color: #cbd2dd; font-weight: 600; margin-top: 6px; }
     button.small { width: auto; margin: 0; padding: 5px 10px; font-size: 12px; }
     .usage { margin-top: 12px; font-size: 11px; opacity: .65; min-height: 14px; }
     .status { font-size: 11px; margin-top: 6px; min-height: 14px; color: #7cd992; }
     .who { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
-    .who .badge { font-size: 11px; background: rgba(46,164,255,.16); color: #7cc4ff; padding: 2px 8px; border-radius: 999px; font-weight: 700; }
+    .who .badge { font-size: 11px; background: rgba(34,197,94,.16); color: #5fce8a; padding: 2px 8px; border-radius: 999px; font-weight: 700; }
     [hidden] { display: none !important; }
   </style>
 </head>
 <body>
-  <h1><span class="dot"></span> TCG Snipe</h1>
+  <h1><span class="dot"></span> TCG Lens</h1>
   <p class="sub">Live Pokémon card market value, inline on marketplace listings.</p>
 
   <!-- Signed-out: enter access code -->
@@ -52,7 +52,7 @@
     <input type="text" id="code" placeholder="PC-XXXX-XXXX" autocomplete="off" spellcheck="false" />
     <button id="unlock">Unlock</button>
     <div class="status" id="authError" style="color:#ff8a8a"></div>
-    <p class="sub" style="margin-top:10px">Don’t have a code? Request access at <strong>tcgsnipe.co.uk</strong>.</p>
+    <p class="sub" style="margin-top:10px">Don’t have a code? Request access at <strong>tcglens.co.uk</strong>.</p>
   </section>
 
   <!-- Signed-in: controls -->
