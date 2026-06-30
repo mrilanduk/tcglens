@@ -45,6 +45,17 @@ async function getAuth() {
 async function setAuth(a) { await chrome.storage.local.set({ auth: a }); }
 async function clearAuth() { await chrome.storage.local.remove('auth'); }
 
+// Compare dotted versions: returns >0 if a newer than b, <0 if older, 0 if equal.
+function cmpVersion(a, b) {
+  const pa = String(a).replace(/^v/, '').split('.').map(n => parseInt(n, 10) || 0);
+  const pb = String(b).replace(/^v/, '').split('.').map(n => parseInt(n, 10) || 0);
+  for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
+    const d = (pa[i] || 0) - (pb[i] || 0);
+    if (d) return d > 0 ? 1 : -1;
+  }
+  return 0;
+}
+
 // ---------- title parsing ----------
 // Marketplace titles are free text ("Charizard ex 199/165 Pokemon 151 PSA 10").
 // Pull out a best-effort (name, num, grade); the server's fuzzy search does the
@@ -369,6 +380,27 @@ chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
       let usage = null;
       try { usage = await apiGet(base, '/api/usage'); } catch { /* gated — ignore */ }
       sendResponse({ ok: true, usage, base });
+    })();
+    return true;
+  }
+  if (msg?.type === 'CHECK_UPDATE') {
+    (async () => {
+      const current = chrome.runtime.getManifest().version;
+      try {
+        const res = await fetch('https://api.github.com/repos/mrilanduk/tcglens/releases/latest', {
+          headers: { Accept: 'application/vnd.github+json' },
+        });
+        if (!res.ok) throw new Error(String(res.status));
+        const data = await res.json();
+        const latest = String(data.tag_name || '').replace(/^v/, '');
+        sendResponse({
+          ok: true, current, latest,
+          updateAvailable: latest && cmpVersion(latest, current) > 0,
+          url: data.html_url || 'https://github.com/mrilanduk/tcglens/releases/latest',
+        });
+      } catch (err) {
+        sendResponse({ ok: false, current, message: String(err.message || err) });
+      }
     })();
     return true;
   }

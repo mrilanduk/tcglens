@@ -7,6 +7,17 @@ function setStatus(msg, ok = true) {
   statusEl.style.color = ok ? '#7cd992' : '#ff8a8a';
 }
 
+// ---------- update check ----------
+async function checkUpdate() {
+  const res = await chrome.runtime.sendMessage({ type: 'CHECK_UPDATE' }).catch(() => null);
+  if (res?.current) document.getElementById('ver').textContent = 'v' + res.current;
+  if (res?.ok && res.updateAvailable) {
+    document.getElementById('updateText').textContent = `Update available — v${res.latest}`;
+    document.getElementById('updateBanner').hidden = false;
+    document.getElementById('updateBtn').onclick = () => chrome.tabs.create({ url: res.url });
+  }
+}
+
 // ---------- view switching ----------
 async function render() {
   const auth = await chrome.runtime.sendMessage({ type: 'GET_AUTH' }).catch(() => null);
@@ -94,3 +105,4 @@ $('clearCache').addEventListener('click', async () => {
 });
 
 render();
+checkUpdate();
