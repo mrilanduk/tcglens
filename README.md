@@ -1,17 +1,18 @@
-# Pulse Price Scanner
+# TCG Snipe
 
-A Chrome (Manifest V3) extension that scans marketplace pages for Pokémon cards
-and shows the **live PokePulse market value** inline on each listing.
+A Chrome (Manifest V3) extension that snipes underpriced Pokémon cards — it scans
+marketplace listings and shows the **live market value** inline on each one.
+Site: [tcgsnipe.co.uk](https://tcgsnipe.co.uk)
 
 ## 🧪 For testers — install in 2 minutes
 
-1. **Download the zip:** [latest release →](https://github.com/mrilanduk/pulse-price-scanner/releases/latest)
-   (grab `pulse-price-scanner.zip`).
+1. **Download the zip:** [latest release →](https://github.com/mrilanduk/tcgsnipe/releases/latest)
+   (grab `tcgsnipe.zip`).
 2. **Unzip** it to a folder (the folder must contain `manifest.json` at its top level).
 3. Open **`chrome://extensions`** → turn on **Developer mode** (top-right) →
    **Load unpacked** → select the unzipped folder.
-4. Click the blue ⚡ icon → **enter your access code** → Unlock.
-   (No code? Ask Pulse Collective for one.)
+4. Click the crosshair icon → **enter your access code** → Unlock.
+   (No code? Request access at tcgsnipe.co.uk.)
 5. Browse **eBay / Vinted / Facebook Marketplace** — price badges appear as you scroll.
 
 Notes: keep the unzipped folder where it is (Chrome loads it live). To update to a

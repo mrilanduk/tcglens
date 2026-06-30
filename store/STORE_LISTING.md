@@ -1,9 +1,9 @@
-# Chrome Web Store listing — Pulse Price Scanner
+# Chrome Web Store listing — TCG Snipe
 
 Everything you paste into the Web Store Developer Dashboard when submitting.
 
 ## Basics
-- **Name:** Pulse Price Scanner
+- **Name:** TCG Snipe
 - **Summary (≤132 chars):** Shows the live market value of Pokémon cards inline on eBay, Vinted & Facebook Marketplace listings.
 - **Category:** Shopping
 - **Language:** English (UK)
@@ -11,7 +11,7 @@ Everything you paste into the Web Store Developer Dashboard when submitting.
 
 ## Detailed description
 ```
-Pulse Price Scanner puts live Pokémon card market values right on the listings you're already browsing.
+TCG Snipe puts live Pokémon card market values right on the listings you're already browsing.
 
 As you scroll eBay, Vinted and Facebook Marketplace, it reads each card listing, looks up its current market value, and shows it inline as a clean price badge — so you can spot a deal at a glance without opening a price-checker in another tab.
 
@@ -52,5 +52,5 @@ Display the current market value of Pokémon trading cards inline on supported m
 - Small promo tile (440×280) is optional; only needed for featuring.
 
 ## Package
-Upload `pulse-price-scanner.zip` (built from the repo — runtime files only). See README / build step.
+Upload `tcgsnipe.zip` (built from the repo — runtime files only). See README / build step.
 ```

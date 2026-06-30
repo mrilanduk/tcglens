@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Pulse Price Scanner",
-  "version": "0.1.0",
-  "description": "Scans eBay, Vinted & Facebook Marketplace for Pokémon cards and shows live PokePulse market value inline.",
+  "name": "TCG Snipe",
+  "version": "0.1.1",
+  "description": "Snipe underpriced Pokémon cards — live market value shown inline on eBay, Vinted & Facebook Marketplace listings.",
   "permissions": ["storage", "contextMenus", "scripting", "activeTab"],
   "host_permissions": [
     "*://*.ebay.co.uk/*",
@@ -20,7 +20,7 @@
     "128": "icons/icon128.png"
   },
   "action": {
-    "default_title": "Pulse Price Scanner",
+    "default_title": "TCG Snipe",
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon16.png",

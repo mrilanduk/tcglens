@@ -420,7 +420,7 @@ function showOverlay(result) {
     return v == null ? '—' : (sym ? sym + (+v).toFixed(2) : (+v).toFixed(2) + ' ' + (c || ''));
   };
   let html = '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">'
-    + '<strong style="color:#7cc4ff">Pulse market value</strong>'
+    + '<strong style="color:#7cc4ff">TCG Snipe — market value</strong>'
     + '<span style="cursor:pointer;opacity:.6" id="pulse-x">✕</span></div>';
   if (result?.ok) {
     const m = result.match || {};
@@ -438,7 +438,7 @@ function showOverlay(result) {
     const reasons = {
       no_match: 'No matching card found', no_price: 'Card found, no price data',
       parse_failed: 'Could not read a card from the text',
-      locked: 'Sign in: open the Pulse extension and enter your access code',
+      locked: 'Sign in: open the TCG Snipe extension and enter your access code',
       error: 'Lookup failed',
     };
     html += `<div style="opacity:.8">${reasons[result?.reason] || 'No result'}</div>`;
