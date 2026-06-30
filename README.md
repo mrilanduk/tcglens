@@ -2,7 +2,7 @@
 
 A Chrome (Manifest V3) extension that shows the **live market value** of Pokémon
 cards inline on marketplace listings as you browse.
-Site: [tcglens.co.uk](https://tcglens.co.uk)
+Site: [tcglens.io](https://tcglens.io)
 
 ## 🧪 For testers — install in 2 minutes
 
@@ -12,7 +12,7 @@ Site: [tcglens.co.uk](https://tcglens.co.uk)
 3. Open **`chrome://extensions`** → turn on **Developer mode** (top-right) →
    **Load unpacked** → select the unzipped folder.
 4. Click the green lens icon → **enter your access code** → Unlock.
-   (No code? Request access at tcglens.co.uk.)
+   (No code? Request access at tcglens.io.)
 5. Browse **eBay / Vinted / Facebook Marketplace** — price badges appear as you scroll.
 
 Notes: keep the unzipped folder where it is (Chrome loads it live). To update to a
