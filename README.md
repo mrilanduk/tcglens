@@ -25,7 +25,12 @@ shorthand. The extension only uses that service's public (no-auth) endpoints:
 
 1. Open `chrome://extensions`, enable **Developer mode** (top-right).
 2. **Load unpacked** → select this `pulse-price-scanner` folder.
-3. Browse eBay/Vinted/FB Marketplace. Badges appear on listings **as you scroll**.
+3. Click the extension icon and **enter your access code** to unlock it (codes are
+   issued by Pulse Collective from the `/access` admin page on the backend).
+4. Browse eBay/Vinted/FB Marketplace. Badges appear on listings **as you scroll**.
+
+Without a valid code the extension stays locked and prices nothing. Revoking a
+code (in `/access`) locks that user out on their next lookup.
 
 The backend URL is **hardcoded** (`SERVICE_URL` in `background.js`) and is not
 shown or editable in the UI — the popup only toggles the extension on/off per
